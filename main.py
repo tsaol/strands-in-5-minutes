@@ -19,14 +19,9 @@ logging.basicConfig(
 # Load environment variables
 load_dotenv()
 
-# EXA_API_URL = "https://api.exa.ai/search"
-# EXA_API_KEY = os.getenv("EXA_API_KEY")
-# exa_client = Exa(api_key="your-exa-api-key")
-
 # Function Decorator Approach
 @tool
 def exa_search(query: str) -> str:
-
     exa_client = Exa(api_key=os.getenv("EXA_API_KEY"))
     search_results = exa_client.search_and_contents(
         query=query,
@@ -49,7 +44,7 @@ model = BedrockModel(
 
 # Set up Streamlit page
 st.set_page_config(page_title="基于Strands & Bedrock 联网搜索", layout="wide")
-st.title("基于Strands & Bedrock 联网搜索")
+st.title("基于Strands Agents & Bedrock 联网搜索")
 
 # Create search input
 search_query = st.text_input("请输入搜索内容:", "")
