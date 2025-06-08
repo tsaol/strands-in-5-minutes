@@ -1,0 +1,23 @@
+[project]
+name = "strands-agents-quickstart"
+version = "0.1.0"
+description = "A web search application using Strands Agents and Exa, demonstrating MCP (Model Context Protocol) capabilities"
+authors = [
+    { name = "Your Name", email = "caoliuh@amazon.com" }
+]
+readme = "README.md"
+requires-python = "~=3.10"
+license = { file = "LICENSE" }
+dependencies = [
+    "strands-agents>=0.1.1",
+    "exa-py>=1.0.0",
+    "streamlit>=1.45.0",
+    "python-dotenv>=1.0.0",
+    "fastapi>=0.100.0",
+    "uvicorn>=0.22.0",
+    "requests>=2.31.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/strands_agents_quickstart"
+Repository = "https://github.com/yourusername/strands_agents_quickstart.git"
