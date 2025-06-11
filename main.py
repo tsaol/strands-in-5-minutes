@@ -56,7 +56,7 @@ if st.button("搜索"):
         with st.spinner("正在搜索中..."):
             try:
                
-                system_prompt = "你是一个专业的搜索助手。请根据搜索结果提供简洁明了的总结。" if language == "中文" else \
+                system_prompt = "你是一个专业的搜索助手。请根据搜索结果提供简洁明了的总结,现在时间是2025年6月9日。" if language == "中文" else \
                                "You are a professional search assistant. Please provide a concise summary based on the search results."
                 
                 agent= Agent(

@@ -65,7 +65,7 @@ MCP 是一个开放协议，用于标准化应用程序如何向大型语言模�
 ## API 密钥获取
 
 - Exa API: https://exa.ai
-
+- reference doc : https://docs.exa.ai/reference/getting-started
 ## 许可证
 
 请参阅 LICENSE 文件
