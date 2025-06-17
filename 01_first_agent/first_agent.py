@@ -2,6 +2,8 @@
 import sys
 import logging
 from strands import Agent
+from strands_tools import current_time, http_request
+
 
 #打开debug 日志 
 logging.getLogger("strands").setLevel(logging.DEBUG)
@@ -11,30 +13,20 @@ logging.basicConfig(
 )
 
 
-
 agent = Agent(
-    system_prompt = """
-你是一个计算机科学教育专家，擅长用简单易懂的语言和实用例子解释计算机科学概念。
-当用户提问时，请给出清晰、准确的回答，并尽量用代码或生活实例帮助理解。
-"""
+    system_prompt = """你是一个生活助手，运用科学的知识回答各种问题。
+    """,
+    tools=[current_time, http_request]
 )
 
 
-def interactive_session():
-    print("计算机学科专家 (输入 'exit' to 退出)")
-    print("-----------------------------------------------------------")
-    
-    while True:
-        # Get user input
-        user_input = input(f"\n你的问题是: ")
-        
-        if user_input.lower() in ["exit", "quit", "bye"]:
-            print("Goodbye!")
-            break
-        
-        # Send the input to the agent, which will automatically print the response
-        print("\nThinking...\n")
-        agent(user_input)
+query = """
+请回答以下问题:
+1. 现在北京时间是几点?
+2. 根据百科网站, 梅雨是什么意思?
+"""
+
 
 if __name__ == "__main__":
-    interactive_session()
+    # interactive_session()
+    response = agent(query)

@@ -22,12 +22,6 @@ venv\Scripts\activate     # Windows
 # 安装必要的包
 ```bash
 pip install strands
-pip install strands-agents strands-agents-tools
-```
-如果使用uv管理
-```bash
-uv pip install strands
-uv pip install strands-agents strands-agents-tools
 ```
 
 ### 2.2 AWS配置
@@ -137,6 +131,3 @@ if __name__ == "__main__":
 
 
 这样，你就成功创建了第一个基于 Strands Agents SDK 和 Amazon Bedrock 的 AI Agent！
-
-
-pip install strands-agents strands-agents-tools)
