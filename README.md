@@ -51,7 +51,7 @@ python mcp_server.py
 
 2. 在新的终端窗口中启动 Streamlit 应用:
 ```bash
-streamlit run app_mcp.py
+streamlit run strands_mcp_search.py
 ```
 
 应用将在本地启动，通常在 http://localhost:8501
