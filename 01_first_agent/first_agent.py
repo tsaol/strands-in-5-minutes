@@ -38,10 +38,3 @@ def interactive_session():
 
 if __name__ == "__main__":
     interactive_session()
-
-
-
-
-# # 调用 Agent
-# response = agent.run("请解释什么是递归，并给出一个Python例子。")
-# print(response)
