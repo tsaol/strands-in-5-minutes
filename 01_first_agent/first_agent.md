@@ -1,4 +1,41 @@
-# Strands 5分钟系列 - 创建你的第一个AI Agent
+#《strands in 5 minutes》 
+Strands 5分钟系列 - 创建你的第一个AI Agent
+
+
+## strands 核心概念
+```markdown
+![Agentic Loop](images/agentic-loop.png)
+```
+- **模型（Model）**
+  - 作为代理的推理引擎，支持Amazon Bedrock、Anthropic Claude、Meta Llama等主流模型
+  - 通过LiteLLM兼容OpenAI、Mistral等第三方API
+  - 示例模型配置：
+    ```
+    from strands.models import BedrockModel
+    model = BedrockModel(model_id="us.amazon.nova-micro-v1:0", region_name='us-east-1')
+    ```
+
+- **工具（Tools）**
+  - 预置20+工具（计算器、HTTP请求、Python REPL等）
+  - 使用`@tool`装饰器快速集成自定义函数：
+    ```
+    from strands import tool
+    @tool
+    def file_analyzer(path: str) -> dict:
+        """文件分析工具"""
+        # 实现文件解析逻辑
+        return analysis_result
+    ```
+
+- **提示词（Prompt）**
+  - 系统提示定义代理行为准则：
+    ```
+    SYSTEM_PROMPT = """你是一个数据分析专家，使用工具处理数据并生成可视化报告：
+    1. 优先使用pandas进行数据清洗
+    2. 使用matplotlib创建交互式图表
+    3. 输出Markdown格式报告"""
+    ```
+  - 用户提示指定具体任务："分析sales.csv中的季度销售趋势"
 
 
 ## 1. 准备工作
