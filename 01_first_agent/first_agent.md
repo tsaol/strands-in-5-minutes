@@ -3,9 +3,9 @@ Strands 5分钟系列 - 创建你的第一个AI Agent
 
 
 ## strands 核心概念
-```markdown
-![Agentic Loop](images/agentic-loop.png)
-```
+
+![Agentic Loop](../images/agentic-loop.png)
+
 - **模型（Model）**
   - 作为代理的推理引擎，支持Amazon Bedrock、Anthropic Claude、Meta Llama等主流模型
   - 通过LiteLLM兼容OpenAI、Mistral等第三方API
