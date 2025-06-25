@@ -1,7 +1,7 @@
 
 # Strands in 5 minutes  
 
-5分钟上手strands系列 - 创建您的第一个AI Agent
+5分钟上手strands系列 - 通过Strands SDK创建您的第一个AI Agent
 
 ## 核心概念
 
@@ -41,13 +41,10 @@
 ## 1. 准备工作
 
 - **安装 Python 3.10 或更高版本**
-- **拥有 AWS 账户**
-- **在 Amazon Bedrock 中启用 Claude 3.7 模型访问权限**
-- **确保有访问 Bedrock 的权限**
+- **拥有 AWS 账户,并在Amazon Bedrock 中启用 Claude 3.7 模型访问权限**
 
 
 ## 2. 环境搭建
-
 ### 2.1 Python环境配置
 
 # 创建并激活 Python 虚拟环境
@@ -67,7 +64,7 @@ uv pip install strands
 uv pip install strands-agents strands-agents-tools
 ```
 
-### 2.2 AWS配置
+### 2.2 环境变量配置
 1. 创建`.env`文件并添加以下内容：
 ```
 AWS_ACCESS_KEY_ID=你的访问密钥ID
@@ -91,7 +88,7 @@ aws sts get-caller-identity
 
 ## 3. 创建你的第一个 Agent
 
-假设你要创建一个专注于计算机科学教育的“Subject Expert” Agent，创建一个文件 `subject_expert.py`，并填入以下代码：
+创建一个专注于计算机科学教育的“Subject Expert” Agent，创建一个文件 `subject_expert.py`，并填入以下代码：
 
 ```python
 from strands import Agent
