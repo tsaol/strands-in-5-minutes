@@ -5,7 +5,7 @@
 
 ## 核心概念
 
-![Agentic Loop](../images/agentic-loop.png)
+![Agentic Loop](../images/01_first_agent/agentic-loop.png)
 
 - **模型（Model）**
   - 作为代理的推理引擎，支持Amazon Bedrock、Anthropic Claude、Meta Llama等主流模型
