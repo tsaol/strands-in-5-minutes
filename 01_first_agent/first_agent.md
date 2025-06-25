@@ -1,8 +1,9 @@
-#《strands in 5 minutes》 
-Strands 5分钟系列 - 创建你的第一个AI Agent
 
+# Strands in 5 minutes  
 
-## strands 核心概念
+5分钟上手strands系列 - 创建您的第一个AI Agent
+
+## 核心概念
 
 ![Agentic Loop](../images/agentic-loop.png)
 
@@ -16,7 +17,7 @@ Strands 5分钟系列 - 创建你的第一个AI Agent
     ```
 
 - **工具（Tools）**
-  - 预置20+工具（计算器、HTTP请求、Python REPL等）
+  - 预置20+工具（计算器、HTTP请求、mem0等）
   - 使用`@tool`装饰器快速集成自定义函数：
     ```
     from strands import tool
@@ -35,7 +36,6 @@ Strands 5分钟系列 - 创建你的第一个AI Agent
     2. 使用matplotlib创建交互式图表
     3. 输出Markdown格式报告"""
     ```
-  - 用户提示指定具体任务："分析sales.csv中的季度销售趋势"
 
 
 ## 1. 准备工作
