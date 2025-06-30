@@ -1,71 +1,82 @@
-# 网络搜索助手 (Web Search Assistant)
+# Strands Agents in 5 Minutes / 5分钟上手Strands系列
 
-这是一个使用 Strands Agents 和 Exa 实现的网络搜索应用，通过 Streamlit 页面展示 MCP (Model Context Protocol) 的基础功能。目前项目处于初始阶段，提供了基本的搜索功能，后续将添加更多 MCP 特色功能。
+[English](README_EN.md) | 中文
 
-## 当前功能
+## 项目介绍
+欢迎来到"5分钟上手Strands系列"教程！这是一个专注于提升用户和开发者构建AI Agent能力的系列教程。通过简洁的5分钟教程形式，帮助您快速掌握Strands Agent的设计、开发、集成和部署流程。
 
-- 使用 Exa API 进行网络搜索
-- 使用 Strands Agents 处理和总结搜索结果
-- 支持中文和英文界面
-- 简洁直观的 Streamlit 用户界面
-- 提供直接 API 调用和 MCP 调用两种模式对比
+## 教程目标
+- 通过系列教程提升用户/开发者的Agent构建能力，确保学习的连续性
+- 掌握Strands Agent应用的设计、开发、集成和部署的基础流程
+- 使用户能够独立开发和部署自己的Agent Demo
 
-## 计划中的功能
+## 课程体系
+按照L100-L400级别划分，循序渐进地介绍：
 
-- 搜索历史记录管理
-- 搜索结果的智能过滤和分类
-- 多语言翻译支持
-- 搜索结果的深度分析
-- 更多 MCP 特色工具和资源
+### L100 - 基础概念
+- Strands Agent的核心组件
+- 基本工作流程
+- 快速启动示例
 
-## 安装步骤
+### L200 - 进阶应用
+- 会话管理
+- 工具集成
+- Web服务对接
 
-1. 克隆仓库:
+### L300 - 高级特性
+- 状态持久化
+- 安全与监控
+- 性能优化
+
+### L400 - 扩展开发
+- MCP协议扩展
+- 自定义工具开发
+- 最佳实践
+
+## 教程特点
+- **简洁高效**: 每节课程控制在5分钟内，突出重点
+- **理论结合实践**: 每个概念都配有实际的示例代码
+- **循序渐进**: 从基础到进阶，层层递进
+- **动手实践**: 每节课程都包含可运行的Demo
+
+## 快速开始
+
+### 环境要求
+- Python 3.10或更高版本
+- AWS账户（用于访问Amazon Bedrock中的Claude 3.7模型）
+
+### 环境搭建
+1. 创建并激活Python虚拟环境：
 ```bash
-git clone https://github.com/yourusername/strands_agents_quickstart.git
-cd strands_agents_quickstart
+python -m venv venv
+source .venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
 ```
 
-2. 使用 uv 构建环境:
+2. 安装依赖：
 ```bash
-# 安装 uv (如果尚未安装)
-curl -sSf https://install.ultraviolet.rs | sh
-
-# 创建虚拟环境并安装依赖
-uv venv
-source .venv/bin/activate
-
-uv pip sync requirements.txt
+uv pip install strands-agents strands-agents-tools
 ```
 
-3. 设置环境变量:
-   - 复制 `.env.example` 文件为 `.env`
-   - 在 `.env` 文件中填入您的 Exa API 密钥、Strands API 密钥和 MCP 服务器 URL
-
-## 运行应用
-
-1. 启动 MCP 服务器:
-```bash
-python mcp_server.py
+### 配置
+创建`.env`文件并添加以下内容：
+```
+AWS_ACCESS_KEY_ID=你的访问密钥ID
+AWS_SECRET_ACCESS_KEY=你的秘密访问密钥
+AWS_DEFAULT_REGION=你的默认区域（如us-east-1）
 ```
 
-2. 在新的终端窗口中启动 Streamlit 应用:
+### 运行示例
 ```bash
-streamlit run strands_mcp_search.py
+python3 first_agent.py
 ```
 
-应用将在本地启动，通常在 http://localhost:8501
+## 课程导航
+- [第一课：构建你的第一个Agent](01_first_agent/first_agent.md)
+- 更多课程陆续添加中...
 
-## 关于 MCP (Model Context Protocol)
+## 参与贡献
+欢迎提交Pull Request来帮助改进这个教程系列！
 
-MCP 是一个开放协议，用于标准化应用程序如何向大型语言模型 (LLM) 提供上下文。MCP 使系统能够与本地运行的 MCP 服务器通信，这些服务器提供额外的工具和资源来扩展 LLM 的能力。
-
-在这个演示中，我们展示了如何使用 MCP 服务器来处理网络搜索请求，而不是直接在应用程序中调用 API。
-
-## API 密钥获取
-
-- Exa API: https://exa.ai
-- reference doc : https://docs.exa.ai/reference/getting-started
 ## 许可证
-
-请参阅 LICENSE 文件
+详见[LICENSE](LICENSE)文件。
